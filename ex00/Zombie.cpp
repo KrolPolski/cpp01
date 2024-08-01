@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 14:25:06 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/08/01 15:02:23 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/08/01 15:22:27 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,8 @@ std::string Zombie::get_name()
 void    Zombie::set_name(std::string n)
 {
     name = n;    
+}
+Zombie::~Zombie()
+{
+    std::cout << name << " has been destroyed with extreme prejudice" << std::endl;
 }

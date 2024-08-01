@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 14:25:11 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/08/01 15:00:50 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/08/01 15:23:36 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ private:
     std::string name;
     
 public:
+    ~Zombie();
     void    announce(void);
     std::string get_name();
     void    set_name(std::string n);
 };
+
 
 void randomChump(std::string name);
 Zombie* newZombie(std::string name);
