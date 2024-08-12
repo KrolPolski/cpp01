@@ -6,24 +6,24 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:29:49 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/08/05 10:49:28 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:02:24 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
+# include <string>
+# include <iostream>
+# include "Weapon.hpp"
+
 class HumanA
 {
 private:
-    /* data */
+    std::string name;
+    Weapon *wpn;
 public:
-    HumanA(std::string name, std::string wpn_type);
+    HumanA(std::string my_name, Weapon& my_wpn);
     ~HumanA();
+    void attack();
 };
-
-HumanA::HumanA(std::string name, std::string wpn_type)
-{
-}
-
-HumanA::~HumanA()
-{
-}
+#endif

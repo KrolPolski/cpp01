@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:30:17 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/08/05 10:42:58 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/08/12 13:55:52 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,11 @@ class Weapon
 private:
     std::string type;
 public:
-    Weapon(/* args */);
+    Weapon(std::string wpn_type);
+    Weapon();
     ~Weapon();
-    const &std::string getType();
+    const std::string& getType() const;
     void    setType(std::string str);
 };
-
-Weapon::Weapon(/* args */)
-{
-}
-
-Weapon::~Weapon()
-{
-}
 
 #endif
