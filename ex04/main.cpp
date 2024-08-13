@@ -27,8 +27,17 @@ int main(int argc, char **argv)
 	out_filename.append(".replace");
 
 	std::ifstream in_file(filename);
+	if (!in_file.is_open())
+	{
+		std::cout << "Could not open file: " << filename << std::endl;
+		return (1);
+	}
 	std::ofstream out_file(out_filename);
-	
+	if (!out_file.is_open())
+	{
+		std::cout << "Could not create or open file: " << out_filename << std::endl;
+		return (1);
+	}
 	for (std::string line; std::getline(in_file, line);)
 	{
 		size_t suspect;
