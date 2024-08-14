@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 14:10:49 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/08/12 16:34:46 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/08/14 12:29:24 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int main(int argc, char **argv)
 	if (!out_file.is_open())
 	{
 		std::cout << "Could not create or open file: " << out_filename << std::endl;
+		in_file.close();
 		return (1);
 	}
 	for (std::string line; std::getline(in_file, line);)
@@ -51,7 +52,5 @@ int main(int argc, char **argv)
 		out_file << line << std::endl;
 	}
 	out_file.close();
-	in_file.close();
-
-	// still needs to handle bad files and bad permissions. 
+	in_file.close(); 
 }
