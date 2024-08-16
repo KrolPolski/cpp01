@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 11:41:26 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/08/16 14:23:22 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/08/16 16:50:13 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(int argc, char **argv)
 {
     enum Level {DEBUG, INFO, WARNING, ERROR};
-    Level level;
+    Level level = DEBUG;
     Harl dude;
     
     if (argc < 2)
