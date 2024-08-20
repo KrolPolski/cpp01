@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:29:49 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/08/18 16:54:50 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/08/20 09:46:06 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 
 class HumanA
 {
-private:
-    std::string name;
-    Weapon &wpn;
-public:
-    HumanA(std::string my_name, Weapon& my_wpn);
-    ~HumanA();
-    void attack();
+    private:
+        std::string name;
+        Weapon &wpn;
+        
+    public:
+        HumanA(std::string my_name, Weapon& my_wpn);
+        ~HumanA();
+        void attack();
 };
 #endif
